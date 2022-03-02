@@ -23,7 +23,9 @@ class AccountRepositoryTest {
         account = new Account();
         accountRepository = new AccountRepository(sessionFactory);
 
-
+        account.setAccountNumber("5823");
+        account.setBalance(5823d);
+        account.setType("ss");
 
     }
 
@@ -42,9 +44,7 @@ class AccountRepositoryTest {
     @Test
     void add() {
         //Arrange
-        account.setAccountNumber("5823");
-        account.setBalance(5823d);
-        account.setType("ss");
+
         //Act
         accountRepository.add(account);
         //Assert
@@ -53,9 +53,7 @@ class AccountRepositoryTest {
     @Test
     void upDate() {
         //Arrange
-        account.setAccountNumber("5823");
-        account.setBalance(5823d);
-        account.setType("ss");
+
         accountRepository.add(account);
         account.setAccountNumber("9876");
         account.setBalance(1200d);
@@ -77,9 +75,7 @@ class AccountRepositoryTest {
     @Test
     void delete() {
         //Arrange
-        account.setAccountNumber("5823");
-        account.setBalance(5823d);
-        account.setType("ss");
+
         accountRepository.add(account);
 
         //Act
@@ -93,9 +89,7 @@ class AccountRepositoryTest {
     @Test
     void findById() {
         //Arrange
-        account.setAccountNumber("5823");
-        account.setBalance(5823d);
-        account.setType("ss");
+       
         accountRepository.add(account);
 
         //Act
