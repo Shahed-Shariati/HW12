@@ -1,0 +1,14 @@
+<?xml version = "1.0" encoding = "utf-8"?>
+<!DOCTYPE hibernate-configuration SYSTEM
+        "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+    <session-factory>
+        <property name="connection.driver_class">org.postgresql.Driver</property>
+        <property name="connection.url">jdbc:postgresql://localhost:5432/hibernate</property>
+        <property name="connection.username">postgres</property>
+        <property name="connection.password">123qweR</property>
+      <!--  <property name="dialect">org.hibernate.dialect.</property>-->
+         <property name="hibernate.hbm2ddl.auto">update</property> <!-- Generates Database Schema. Do not Use In PRODUCTION! -->
+        <property name="show_sql">true</property>
+    </session-factory>
+</hibernate-configuration>
